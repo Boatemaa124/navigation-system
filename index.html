@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GCTU Navigation System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img src="gctu-logo.png" alt="gctu-logo" />
+      <h1>GCTU Navigation System</h1>
+      <nav>
+        <ul>
+          <li><a href="#map">Map</a></li>
+          <li><a href="#directions">Directions</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="map">
+      <h2 class="title-map">Map of GCTU Campus</h2>
+      <div id="mapContainer">
+        <!-- Map will be displayed here -->
+      </div>
+    </section>
+
+    <section id="directions">
+      <h2>Get Directions</h2>
+      <p>Select your starting point and destination:</p>
+      <label for="start">Start: </label>
+      <select id="start">
+        <option value="Entrance">Entrance</option>
+        <option value="Administration">Administration Block</option>
+        <option value="GBlock">Graduate Block</option>
+        <option value="car">Car Park</option>
+        <option value="Forecourt">Forecourt</option>
+        <option value="Clinic">Clinic</option>
+        <option value="FoCIS">FoCIS</option>
+        <option value="engineering">Faculty Of Engineering</option>
+        <option value="Cafeteria">Cafeteria</option>
+        <option value="Ourday">Ourday</option>
+        <option value="library">Library</option>
+        <option value="BLOCKB">Block B</option>
+        <option value="BLOCKC">Block C</option>
+        <option value="SchoolField">School Field</option>
+        <option value="bushcanteen">Bush Canteen</option>
+        <option value="hostelA">Hostel Block A</option>
+        <option value="hostelB">Hostel Block B</option>
+        <option value="hostelC">Hostel Block C</option>
+      </select>
+
+      <label for="end">End: </label>
+      <select id="end">
+        <option value="Entrance">Entrance</option>
+        <option value="Administration">Administration Block</option>
+        <option value="GBlock">Graduate Block</option>
+        <option value="car">Car Park</option>
+        <option value="Forecourt">Forecourt</option>
+        <option value="Clinic">Clinic</option>
+        <option value="FoCIS">FoCIS</option>
+        <option value="engineering">Faculty Of Engineering</option>
+        <option value="Cafeteria">Cafeteria</option>
+        <option value="Ourday">Ourday</option>
+        <option value="library">Library</option>
+        <option value="BLOCKB">Block B</option>
+        <option value="BLOCKC">Block C</option>
+        <option value="SchoolField">School Field</option>
+        <option value="bushcanteen">Bush Canteen</option>
+        <option value="hostelA">Hostel Block A</option>
+        <option value="hostelB">Hostel Block B</option>
+        <option value="hostelC">Hostel Block C</option>
+      </select>
+
+      <button onclick="getDirections()">Show Directions</button>
+      <div id="directionsResult"></div>
+    </section>
+
+    <section id="about">
+      <h2>About This System</h2>
+      <p>
+        This is a basic navigation system of GCTU to help students, lecturers, staff 
+        and vistors navigate around the school building. It includes a map and direction 
+        features.
+        <br>
+         <!-- Measure distance
+        Total area: 47,989.04 m² (516,549.69 ft²)
+        Total distance: 894.11 m (2,933.43 ft) -->
+        This map has a total area of 47,989.04 m² (516,549.69 ft²) and a total 
+        distance of 894.11 m (2,933.43 ft). 
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 All Rights Reserved. GCTU Navigation System</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Add Google Maps API -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWm7
+      P81rgRvwOeQX8doj7961Ipa9W_Yhg&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
+
+
